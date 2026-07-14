@@ -1,10 +1,7 @@
 services:
   todo:
-    image: nginx:alpine
+    build: .
     container_name: todo-test
     restart: unless-stopped
     ports:
       - "8980:80"
-    volumes:
-      - ./index.html:/usr/share/nginx/html/index.html:ro
-      - ./style.css:/usr/share/nginx/html/style.css:ro
